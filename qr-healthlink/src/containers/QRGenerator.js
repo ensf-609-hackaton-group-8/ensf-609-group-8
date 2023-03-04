@@ -50,7 +50,7 @@ export default function QRGenerator() {
             type={"text"}
             value={name}
             placeholder={"Patient Name"}
-            maxLength={300}
+            maxLength={30}
             onChange={(event) => {
               nameSet(event.target.value);
             }}
@@ -61,7 +61,7 @@ export default function QRGenerator() {
           <input
             type={"text"}
             placeholder={"Date Of Birth"}
-            maxLength={100}
+            maxLength={10}
             value={dateOfBirth}
             onChange={(event) => {
               dateOfBirthSet(event.target.value);
@@ -74,7 +74,7 @@ export default function QRGenerator() {
             type={"text"}
             value={albertaHealthNumber}
             placeholder={"Alberta Health Number"}
-            maxLength={90}
+            maxLength={9}
             onChange={(event) => {
               albertaHealthNumberSet(event.target.value);
             }}
@@ -86,7 +86,7 @@ export default function QRGenerator() {
             type={"text"}
             value={email}
             placeholder={"Email"}
-            maxLength={300}
+            maxLength={30}
             onChange={(event) => {
               emailSet(event.target.value);
             }}
@@ -98,7 +98,7 @@ export default function QRGenerator() {
             type={"text"}
             value={phone}
             placeholder={"Patient Phone Number"}
-            maxLength={110}
+            maxLength={11}
             onChange={(event) => {
               phoneSet(event.target.value);
             }}
