@@ -38,25 +38,30 @@ export default function QRGenerator() {
     });
   }, [plaintext]);
 
+  const charCount = summary.length;
+
   return (
     <div>
       <h1>QRGenerator</h1>
       <div>
         <label>
-          <p>Name</p>
+          <p></p>
           <input
             type={"text"}
             value={name}
-            placeholder={"e.g. Jane Doe"}
+            placeholder={"Patient Name"}
+            maxLength={300}
             onChange={(event) => {
               nameSet(event.target.value);
             }}
           />
         </label>
         <label>
-          <p>Date of Birth</p>
+          <p></p>
           <input
             type={"text"}
+            placeholder={"Date Of Birth"}
+            maxLength={100}
             value={dateOfBirth}
             onChange={(event) => {
               dateOfBirthSet(event.target.value);
@@ -64,53 +69,60 @@ export default function QRGenerator() {
           />
         </label>
         <label>
-          <p>Alberta Health Number</p>
+          <p></p>
           <input
             type={"text"}
             value={albertaHealthNumber}
-            placeholder={"e.g. 123"}
+            placeholder={"Alberta Health Number"}
+            maxLength={90}
             onChange={(event) => {
               albertaHealthNumberSet(event.target.value);
             }}
           />
         </label>
         <label>
-          <p>Email</p>
+          <p></p>
           <input
             type={"text"}
             value={email}
-            placeholder={"e.g. someone@gmail.com"}
+            placeholder={"Email"}
+            maxLength={300}
             onChange={(event) => {
               emailSet(event.target.value);
             }}
           />
         </label>
         <label>
-          <p>Phone</p>
+          <p></p>
           <input
             type={"text"}
             value={phone}
-            placeholder={"e.g. +1 123 456 7890"}
+            placeholder={"Patient Phone Number"}
+            maxLength={110}
             onChange={(event) => {
               phoneSet(event.target.value);
             }}
           />
         </label>
-        <label>
-          <p>Summary</p>
-          <input
-            type={"text"}
-            value={summary}
-            placeholder={"e.g. Leg fracture"}
-            onChange={(event) => {
-              summarySet(event.target.value);
-            }}
-          />
-        </label>
+        <div>
+          <label>
+            Details of Call-In (Characters Left : {2910 - charCount})
+          </label>
+          <div>
+            <textarea
+              type={"text"}
+              value={summary}
+              placeholder={"Description of Patients Issues..."}
+              maxLength={2910}
+              onChange={(event) => {
+                summarySet(event.target.value);
+              }}
+            />
+          </div>
+        </div>
       </div>
       <div>
         <p>Encryption code: {key}</p>
-        <p>QR:</p>
         <img alt="qr" src={qr} />
         <div>
           <a href={qr} download={`${key}.png`}>
