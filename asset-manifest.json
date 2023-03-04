@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/ensf-609-group-8/static/css/main.073c9b0a.css",
+    "main.js": "/ensf-609-group-8/static/js/main.c1ca6ae7.js",
+    "static/js/787.5c70ebe2.chunk.js": "/ensf-609-group-8/static/js/787.5c70ebe2.chunk.js",
+    "static/media/logo.svg": "/ensf-609-group-8/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/ensf-609-group-8/index.html",
+    "main.073c9b0a.css.map": "/ensf-609-group-8/static/css/main.073c9b0a.css.map",
+    "main.c1ca6ae7.js.map": "/ensf-609-group-8/static/js/main.c1ca6ae7.js.map",
+    "787.5c70ebe2.chunk.js.map": "/ensf-609-group-8/static/js/787.5c70ebe2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.c1ca6ae7.js"
+  ]
+}
