@@ -1,6 +1,21 @@
 import QR from "qrcode";
 import { useEffect, useState } from "react";
 import CryptoJS from "crypto-js";
+import styled from "styled-components";
+
+const Form = styled.div`
+  align-content: "center";
+  display: "flex";
+  flex-direction: "column";
+  justify-content: "center";
+  padding: 1rem;
+`;
+
+const Input = styled.input`
+  border-radius: 0.25rem;
+  padding: 0 1rem;
+  width: "100%";
+`;
 
 export default function QRGenerator() {
   const [name, nameSet] = useState("");
@@ -41,7 +56,7 @@ export default function QRGenerator() {
   const charCount = summary.length;
 
   return (
-    <div>
+    <Form>
       <h1>QRGenerator</h1>
       <div>
         <label>
@@ -66,6 +81,7 @@ export default function QRGenerator() {
             onChange={(event) => {
               dateOfBirthSet(event.target.value);
             }}
+            style={{ width: "100%" }}
           />
         </label>
         <label>
@@ -78,6 +94,7 @@ export default function QRGenerator() {
             onChange={(event) => {
               albertaHealthNumberSet(event.target.value);
             }}
+            style={{ width: "100%" }}
           />
         </label>
         <label>
@@ -90,6 +107,7 @@ export default function QRGenerator() {
             onChange={(event) => {
               emailSet(event.target.value);
             }}
+            style={{ width: "100%" }}
           />
         </label>
         <label>
@@ -102,6 +120,7 @@ export default function QRGenerator() {
             onChange={(event) => {
               phoneSet(event.target.value);
             }}
+            style={{ width: "100%" }}
           />
         </label>
         <div>
@@ -130,6 +149,6 @@ export default function QRGenerator() {
           </a>
         </div>
       </div>
-    </div>
+    </Form>
   );
 }
